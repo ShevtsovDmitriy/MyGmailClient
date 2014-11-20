@@ -53,11 +53,11 @@ public class MainActivity extends Activity {
 
         Intent intent = getIntent();
         textEmail = intent.getStringExtra("email_id");
-        System.out.println(textEmail);
+        //System.out.println(textEmail);
         textViewEmail.setText(textEmail);
         try {
-            System.out.println("On Home Page***"
-                    + GetNameInForeground.GOOGLE_USER_DATA);
+            //System.out.println("On Home Page***"
+              //      + GetNameInForeground.GOOGLE_USER_DATA);
             JSONObject profileData = new JSONObject(
                     GetNameInForeground.GOOGLE_USER_DATA);
 
