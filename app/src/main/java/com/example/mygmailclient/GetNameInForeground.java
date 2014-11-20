@@ -4,6 +4,7 @@ package com.example.mygmailclient;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -55,6 +56,7 @@ public class GetNameInForeground extends AsyncTask<Void, Void, Void> {
     }
 
     private void fetchNameFromProfileServer() throws IOException, JSONException {
+        //Toast.makeText(mActivity, "in background", Toast.LENGTH_SHORT).show();
         String token = fetchToken();
         URL url = new URL("https://www.googleapis.com/oauth2/v1/userinfo?access_token="+ token);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
